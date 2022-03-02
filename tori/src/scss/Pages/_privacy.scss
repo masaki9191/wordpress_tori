@@ -1,0 +1,111 @@
+.p-privacy {
+    $fvTitle: 40%;
+    .c-fv__title {
+        width: $fvTitle;
+    }
+    .c-fv__img {
+        width: (100% - $fvTitle);
+    }
+    &__inner {
+        max-width: 960px;
+        margin: auto;
+    }
+    &__lead {
+        margin: 90px auto 0;
+        line-height: 2;
+    }
+    &__list {
+        margin: 135px 0;
+    }
+    &-item {
+        margin-bottom: 55px;
+        &__lead {
+            color: $color_blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &__txt {
+            line-height: 2;
+        }
+    }
+    &__detail {
+        margin-left: 50px;
+        padding: 40px 0;
+        dl {
+            &:not(:last-child) {
+                margin-bottom: 45px;
+            }
+        }
+        dt {
+            color: $color_blue;
+            font-size: 20px;
+            font-weight: bold;
+            &::after {
+                @include icon_img(26px, 33px, '../img/privacy/icon_bird.svg');
+                vertical-align: bottom;
+            }
+            span {
+                display: inline-block;
+                border-bottom: 1px solid $color_blue;
+            }
+        }
+        dd {
+            line-height: 2;
+            margin: 0;
+            margin-top: 10px;
+        }
+    }
+    @include mq(sp) {
+        .c-fv__title {
+            p {
+                white-space: nowrap;
+            }
+            h2,
+            p {
+                z-index: 2;
+                position: relative;
+            }
+        }
+        &__inner {
+            max-width: 100%;
+            padding: $paddingWidth $paddingWidth 0;
+        }
+        &__lead {
+            max-width: 100%;
+            margin: 0;
+            text-align: left;
+        }
+        &__list {
+            margin: 30px 0 0;
+        }
+        &-item {
+            margin-bottom: 30px;
+            &__lead {
+                font-size: 15px;
+            }
+            &__txt {
+                line-height: 2;
+            }
+        }
+        &__detail {
+            margin-left: 0;
+            padding: 40px 0;
+            dl {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+            dt {
+                font-size: 12px;
+                &::after {
+                    @include icon_img(15px, 20px, '../img/privacy/icon_bird.svg');
+                }
+            }
+            dd {
+                line-height: 2;
+                margin: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}

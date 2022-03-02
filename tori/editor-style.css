@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@media screen and (max-width: 768px) {}
+:root {
+  --color-main: #587993; /* var(--color-main)で色が出力される */
+  --color-sub: #F4E776;
+}
+body.mceContentBody {
+  font-size: 16px;
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
+  text-align: justify;
+  line-height: 2.0;
+  letter-spacing: 0.05em;
+}
+.mceContentBody {
+  text-align: justify;
+  line-height: 2.0;
+  letter-spacing: 0.05em;
+}
+.mceContentBody a {
+  text-decoration: underline;
+  display: inline-block;
+  color: var(--color-main);
+}
+.mceContentBody a:hover {
+  text-decoration: none;
+}
+.mceContentBody p {
+  margin: 0 0 30px;
+  overflow: hidden;
+}
+.mceContentBody .subtitle01, .headline1 {
+  border-left: 4px solid var(--color-main);
+  padding: 1px 0 1px 5px;
+  margin: 0 0 30px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.mceContentBody .subtitle02, .headline2 {
+  border-top: 2px dashed var(--color-main);
+  border-bottom: 2px dashed var(--color-main);
+  padding: 20px 0;
+  margin: 0 0 30px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+	color: var(--color-main);
+}
+.mceContentBody .subtitle03, .headline3 {
+  display: block;
+  margin: 0 0 30px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-main);
+  line-height: 1.6;
+}
+.mceContentBody .subtitle04, .headline4, .subtitle04 {
+  padding: 25px 0 25px 10px;
+  margin: 0 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  position: relative;
+	color: var(--color-main);
+}
+.mceContentBody .subtitle05, .headline5, .subtitle05 {
+  background: linear-gradient(transparent 60%, rgba(244, 231, 118, 0.5) 60%);
+}
+.mceContentBody .subtitle06, .headline6, .subtitle06 {
+  color: var(--color-main);
+  font-weight: bold;
+}
+.mceContentBody .subtitle07, .headline7, .subtitle07 {
+  color: #DF6061;
+  font-weight: bold;
+}
+.mceContentBody .subtitle04::before, .headline4::before {
+  content: "";
+	background: url(./assets/img/blog/detail/subtitle04_b.png) no-repeat;
+  position: absolute;
+  left: 0;
+	top: 0;
+	width: 43px;
+	height: 21px;
+	background-size: 100% auto;
+}
+.mceContentBody .subtitle04::after, .headline4::after{
+  content: "";
+	background: url(./assets/img/blog/detail/subtitle04_a.png) no-repeat;
+  position: absolute;
+  left: 0;
+	bottom: 0;
+	width: 43px;
+	height: 21px;
+	background-size: 100% auto;
+	
+}
+.mceContentBody blockquote {
+  border: 1px dotted #333333;
+  padding: 20px;
+  margin: 0 0 35px;
+  color: #5f5f5f;
+  text-align: justify;
+}
+.mceContentBody blockquote p:last-child {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=editor-style-post.css.map */

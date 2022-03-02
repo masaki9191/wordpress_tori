@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* カテゴリータブ「よく使うもの」 */
+.category-tabs .hide-if-no-js {
+	display: none;
+}
+
+/* カテゴリー「新規カテゴリーを追加」 */
+.wp-hidden-children {
+	display: none;
+}
+
+/* 記事一覧のサムネイル欄 */
+.column-thumbnail {
+	width: 120px;
+}
+.column-mycategory {
+	width: 150px;
+}
+.acf_postbox > .inside > .field.field_type-message {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* ACF */
+.acf_postbox .field textarea {
+	min-height: 60px;
+}
+
+@media screen and (max-width: 782px) {
+	ul.acf-radio-list li input,
+	ul.acf-checkbox-list li input {
+		width: 25px !important;
+	}
+}

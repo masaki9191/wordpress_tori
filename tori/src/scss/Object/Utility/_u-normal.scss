@@ -1,0 +1,22 @@
+@include mq(max1020) {
+    body {
+        width: 1020px;
+        overflow-x: scroll;
+    }
+}
+
+@include mq(sp) {
+    body {
+        width: auto;
+        overflow-x: hidden;
+    }
+    .sp-hidden {
+        display: none !important;
+    }
+}
+
+@include mq(pc) {
+    .pc-hidden {
+        display: none !important;
+    }
+}

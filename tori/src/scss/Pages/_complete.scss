@@ -1,0 +1,46 @@
+.p-confirm {
+    .title {
+        font-size: 30px;
+        color: $color_blue;
+    }
+}
+
+.p-complete {
+    text-align: center;
+    padding: 50px 0;
+    .title {
+        font-size: 30px;
+    }
+    .txt {
+        margin-top: 20px;
+    }
+    .link {
+        margin-top: 20px;
+    }
+    .top_go_btn {
+        width: 300px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color_blue;
+        color: white;
+        border: 1px solid $color_blue;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.5s;
+        transform: skewX(-17deg);
+        &:hover {
+            background-color: white;
+            color: $color_blue;
+        }
+    }
+    @include mq(sp) {
+        section {
+            padding: 0 $paddingWidth;
+        }
+        .title {
+            font-size: 20px;
+        }
+    }
+}

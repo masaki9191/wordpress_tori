@@ -1,0 +1,242 @@
+.mw_wp_form .horizontal-item+.horizontal-item {
+    margin-left: unset !important;
+}
+
+.contact-form {
+    margin-top: -10px;
+    &__title {
+        margin-top: 96px;
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.3em;
+            line-height: 1;
+            padding: 1em 1.5em;
+            border-radius: 40px;
+            display: inline-block;
+        }
+    }
+    &__lead {
+        font-size: 19px;
+        line-height: 2.2;
+        margin-top: 1em;
+    }
+    &__inner {
+        max-width: 880px;
+        margin: 65px auto 0;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column {
+        width: calc((100% - 50px) / 2);
+    }
+    &__privacy {
+        color: $color_blue;
+        letter-spacing: 0.05em;
+        a {
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-decoration: underline;
+            color: $color_blue;
+        }
+    }
+    .form-group {
+        margin-bottom: 40px;
+        .mwform-radio-field label {
+            display: block;
+        }
+        &.invalid .error {
+            display: inline-block;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+            .txt {
+                font-weight: bold;
+                letter-spacing: 0.3em;
+            }
+        }
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            padding: 1em;
+            line-height: 1;
+            font-size: 14px;
+            width: 100%;
+            outline: unset;
+            border: 1px solid #A9B9C7;
+            &::placeholder {
+                color: $color_blue;
+            }
+        }
+        textarea {
+            height: 172px;
+        }
+        .txt {
+            color: $color_blue;
+        }
+        .required {
+            font-size: 14px;
+            line-height: 1;
+            color: white;
+            padding: 0.2em .8em;
+            background-color: $color_blue;
+            border-radius: 1em;
+            display: inline-block;
+            margin: 0 1em;
+        }
+        .error {
+            color: #C74B45;
+            font-size: 14px;
+            display: inline-block;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            p {
+                margin: 0 .8em;
+                color: $color_blue;
+                white-space: nowrap;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .mwform-radio-field {
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                &:checked~.mwform-radio-field-text {
+                    background-color: white;
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+            &-text {
+                padding-left: 30px;
+                position: relative;
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    background-color: white;
+                    border-radius: 50%;
+                    border: 1px solid $color_blue;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    top: 10px;
+                    left: 10px;
+                    transform: translate(-50%, -50%);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: $color_blue;
+                }
+            }
+        }
+        &.last {
+            margin-bottom: 10px;
+        }
+    }
+    @include mq(sp) {
+        margin-top: 0;
+        &__inner {
+            padding: 0 25px;
+        }
+        &__title {
+            margin-top: 0;
+            span {
+                font-size: 12px;
+                line-height: 1.8;
+                padding: 1.5em 1.5em 1em;
+                border-radius: 40px;
+                display: inline-block;
+                letter-spacing: 0.1em;
+            }
+        }
+        &__lead {
+            font-size: 12px;
+            line-height: 2.2;
+            margin-top: 2em;
+            letter-spacing: 0.1em;
+        }
+        &__inner {
+            max-width: 100%;
+            margin: 30px auto 0;
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__column {
+            width: 100%;
+        }
+        &__privacy {
+            color: $color_blue;
+            letter-spacing: 0.05em;
+            a {
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                text-decoration: underline;
+                color: $color_blue;
+            }
+        }
+        .form-group {
+            margin-bottom: 25px;
+            .required {
+                padding: 0.4em 1.2em;
+            }
+            label .txt {
+                font-size: 13px;
+            }
+            .mwform-radio-field {
+                &-text {
+                    &::before {
+                        top: -2px;
+                    }
+                    &:after {
+                        content: "";
+                        top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact__btn {
+    .c-btn {
+        width: 295px;
+        margin: 45px 0 0 40px;
+        border: unset;
+        background-color: unset;
+        &::before {
+            border: 1px solid #c7c5c5;
+        }
+        span:last-child {
+            display: unset;
+        }
+        span:first-child::after {
+            content: unset;
+        }
+    }
+    @include mq(sp) {
+        .c-btn {
+            margin: 35px 0;
+            &::before {
+                border: 1px solid #c7c5c5;
+            }
+        }
+    }
+}
